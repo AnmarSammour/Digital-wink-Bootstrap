@@ -24,11 +24,13 @@ body {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(90deg, #FE68AE, #1D3557);
+    background: -webkit-linear-gradient(90deg, #457b9d, #FE68AE);
+    font-size: 18px;
+    font-weight: bolder;
+    text-transform: uppercase;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
-    animation: gradient-wave 3s ease-in-out infinite;
 }
 
 /* Dropdown Toggle Button */
@@ -57,4 +59,14 @@ body {
 
 .dropdown-toggle:hover .p-style {
     color: #fe68ae;
+}
+
+
+/* Footer Styles */
+.footer-logo {
+    box-shadow: -3px -3px 20px 5px rgba(255, 220, 237, 0.5);
+}
+
+.footer-link.text-secondary:hover {
+    color: white !important;
 }
