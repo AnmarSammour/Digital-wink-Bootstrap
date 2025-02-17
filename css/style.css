@@ -49,3 +49,12 @@ body {
 .btn-custom:hover {
     background-color: #1d355797 !important;
 }
+
+/* Hover Effects for Dropdown Toggle */
+.dropdown:hover>.dropdown-toggle {
+    font-size: 17px;
+}
+
+.dropdown-toggle:hover .p-style {
+    color: #fe68ae;
+}

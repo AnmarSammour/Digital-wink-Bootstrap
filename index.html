@@ -12,9 +12,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD+Guides&family=Playwrite+IS:wght@100..400&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body>
+
   <!-- Header -->
   <header class="header-wrapper fixed-top py-3">
     <div class="container">
@@ -81,7 +83,39 @@
       </div>
     </div>
   </header>
-  
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label text-info">Email address</label>
+              <input type="email" class="form-control" id="email">
+              <div class="form-text text-muted">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label text-info">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input bg-info" type="checkbox" role="switch" checked>
+              <label class="form-check-label text-info" for="flexSwitchCheckChecked">Remember me</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="submit" class="btn btn-info text-white">Login</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
