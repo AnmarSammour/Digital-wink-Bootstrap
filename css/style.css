@@ -61,6 +61,23 @@ body {
     color: #fe68ae;
 }
 
+
+/* Fixed image Styles */
+.fixed-img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.aboutbg {
+    background-image: url(../images/aboutbg.png);
+}
+
+.achievements {
+    background-image: url(../images/achievements.png);
+}
+
 /* featured-works Styles */
 .work-card {
     position: relative;
