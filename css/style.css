@@ -7,7 +7,6 @@
 /* Body Styles */
 body {
     font-family: "Dancing Script", serif;
-    background-color: #F5F3FF;
     color: #000;
 }
 
@@ -25,6 +24,7 @@ body {
 
 .gradient-text {
     background: -webkit-linear-gradient(90deg, #457b9d, #FE68AE);
+    font-size: 18px;
     font-weight: bolder;
     text-transform: uppercase;
     -webkit-background-clip: text;

@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body class="bg-light">
 
   <!-- ------------------------------------ Header ------------------------------------ -->
   <header class="header-wrapper fixed-top py-3">
@@ -118,8 +118,8 @@
   </div>
 
   <!-- ------------------------------------ Welcome Section ------------------------------------ -->
-  <section class="container-fluid p-0">
-    <div class="p-5 bg-light text-dark">
+  <section class="container-fluid p-0 shadow-lg">
+    <div class="p-5 bg-light text-dark" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
       <div class="container">
         <h2 class="fw-bold text-start gradient-text">Digital Wink</h2>
         <p class="lead text-start">Transform your digital memories into tangible products like magnetic photos and
@@ -129,7 +129,64 @@
       </div>
     </div>
   </section>
-  
+
+  <hr class="my-4">
+
+  <!-- ------------------------------------ Featured Digital Solutions Section ------------------------------------ -->
+  <section class="container-fluid bg-light p-0">
+    <div class="mx-auto my-3 p-5 text-center text-dark rounded-3 shadow-lg">
+      <h1>Featured Digital Solutions</h1>
+    </div>
+    <div class="accordion" id="accordioncollapse">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="head1">
+          <button class="accordion-button collapsed btn-outline-info text-info shadow-lg gradient-text" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+            style="font-size: 25px;">
+            Memory Preservation
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="head1"
+          data-bs-parent="#accordioncollapse">
+          <div class="accordion-body border-info text-secondary">
+            Transform your digital memories into tangible keepsakes like magnetic photos and personalized prints.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="head2">
+          <button class="accordion-button collapsed btn-outline-info text-info shadow-lg gradient-text" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+            style="font-size: 25px;">
+            Digital Solutions
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="head2"
+          data-bs-parent="#accordioncollapse">
+          <div class="accordion-body border-info text-secondary">
+            Get efficient digital tools like business management apps and product design services to streamline your
+            workflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="head3">
+          <button class="accordion-button collapsed btn-outline-info text-info shadow-lg gradient-text" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+            aria-controls="collapseThree" style="font-size: 25px;">
+            E-commerce Growth
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="head3"
+          data-bs-parent="#accordioncollapse">
+          <div class="accordion-body border-info text-secondary">
+            Boost your online presence and marketing efforts with our tailored e-commerce solutions and strategies.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ------------------------------------  Fixed image Section ------------------------------------ -->
   <hr class="my-4">
 
