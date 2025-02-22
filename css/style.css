@@ -357,10 +357,8 @@ body {
 
     .news-article .article-image {
         width: 27%;
-        /* زيادة عرض الصورة لتصل إلى الحواف */
         height: 100%;
         margin: 0;
-        /* إزالة الهوامش */
     }
 
     .news-article.left-image .article-image {
