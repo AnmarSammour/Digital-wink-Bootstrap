@@ -60,6 +60,24 @@ body {
     color: #fe68ae;
 }
 
+/* Main Styles  */
+main {
+    width: 100%;
+    min-height: 85vh;
+}
+
+.carousel-item {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
 
 /* Fixed image Styles */
 .fixed-img {
