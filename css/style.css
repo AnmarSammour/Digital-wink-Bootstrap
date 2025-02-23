@@ -22,6 +22,7 @@ body {
     padding-right: 10px !important;
 }
 
+
 .gradient-text {
     background: -webkit-linear-gradient(90deg, #457b9d, #FE68AE);
     font-size: 18px;
@@ -51,14 +52,32 @@ body {
     background-color: #1d355797 !important;
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border: none !important;
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-item {
+    color: #1D3557 !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(225, 225, 225, 0.5) !important;
+}
+
 /* Hover Effects for Dropdown Toggle */
-.dropdown:hover>.dropdown-toggle {
+.dropdown-toggle:hover {
     font-size: 17px;
 }
 
-.dropdown-toggle:hover .p-style {
-    color: #fe68ae;
+.dropdown-toggle:hover>.p-style {
+    color: #fe68ae !important;
 }
+
 
 /* Main Styles  */
 main {
@@ -185,23 +204,21 @@ main {
     width: 100% !important;
 }
 
+.thank-you-card {
+    width: 100% !important;
+}
+
 .custom-container {
-    width: 90% !important;
+    width: 85% !important;
     margin: 2rem auto !important;
 }
 
 .card-bg {
     border: none !important;
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1) !important;
     overflow: hidden !important;
     border-radius: 20px !important;
-    min-height: 450px !important;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2) !important;
-}
-
-.card-bg {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-    background-size: 120% !important;
+    min-height: 400px !important;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5) !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
 }
@@ -284,10 +301,6 @@ main {
     color: #1D3557 !important;
     text-decoration: none !important;
     font-weight: bold !important;
-}
-
-.translate-link:hover {
-    text-decoration: underline !important;
 }
 
 .btn-copy {
