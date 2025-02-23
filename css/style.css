@@ -79,6 +79,15 @@ main {
     border-radius: 10px;
 }
 
+/* Welcome Styles */
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #000 !important;
+}
+
 /* Fixed image Styles */
 .fixed-img {
     width: 100%;
