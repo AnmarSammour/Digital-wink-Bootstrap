@@ -85,7 +85,8 @@ main {
 }
 
 .btn:hover {
-    background-color: #000 !important;
+    background-color: #044572 !important;
+    color: #cbcbcb !important;
 }
 
 /* Fixed image Styles */
