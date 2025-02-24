@@ -515,6 +515,12 @@ main {
     .article-image {
         order: -1;
     }
+
+    .article-content {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
 }
 
 /* Footer Styles */
