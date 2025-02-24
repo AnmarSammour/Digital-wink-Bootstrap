@@ -19,73 +19,66 @@
 <body class="bg-light">
 
   <!-- ------------------------------------ Header ------------------------------------ -->
-  <header class="header-wrapper fixed-top py-2">
+  <header class="header-wrapper fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <!-- Logo and Brand -->
-          <div class="d-flex align-items-center">
-            <img src="images/logo.png" alt="Logo" class="rounded-circle mx-3 shadow" width="60" height="60">
-            <a href="#" class="navbar-brand text-dark"
-              style="border-right: 1px solid #c0c0c0; padding-right: 10px; font-weight: bold;">
-              <span class="gradient-text">Digital Wink</span>
-            </a>
-          </div>
+          <!-- Logo -->
+          <img src="images/logo.png" class="rounded-circle mx-3 shadow" alt="Logo" height="60px" width="60px">
+          <span class="gradient-text">Digital Wink</span>
 
-          <!-- Toggler Button for Small Screens -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button><!-- Toggler Button -->
 
-          <!-- Navbar Content -->
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark fw-bold">Home</a>
+                <a class="nav-link active text-dark fw-bold" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark fw-bold">Our Services</a>
+                <a class="nav-link text-dark fw-bold" href="#">Our Services</a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle text-dark fw-bold border-2 border-dark rounded-3"
-                  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark fw-bold border-2 border-dark rounded-3" href="#"
+                  id="nav-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="p-style">P</span>ages
                 </a>
-                <ul class="dropdown-menu mt-2 fade" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item text-dark" href="#">Digital Products</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">Our Solutions</a></li>
+                <ul class="dropdown-menu mt-3" aria-labelledby="nav-Dropdown">
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Digital Products</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Our Solutions</a></li>
                   <li>
                     <hr class="dropdown-divider bg-dark">
                   </li>
-                  <li><a class="dropdown-item text-dark" href="#">Login</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">Your Cart</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">Product Details</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">Checkout</a></li>
-                  <li><a class="dropdown-item text-dark" href="#">More ...</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Login</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Your Cart</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Product Details</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">Checkout</a></li>
+                  <li><a class="dropdown-item text-dark" target="_blank" href="#">More ...</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark fw-bold">Contact</a>
+                <a class="nav-link disabled text-dark fw-bold">Contact</a>
               </li>
             </ul>
 
             <!-- Search and Login Buttons -->
-            <form class="d-flex" role="search">
-              <input class="form-control me-3 border-3 border-dark rounded-3" type="search" placeholder="Search"
+            <form class="d-flex">
+              <input class="form-control m-3 border-3 border-dark rounded-3" type="search" placeholder="Search"
                 aria-label="Search">
-              <button class="btn btn-custom text-white me-3 border-3 border-dark rounded-3 shadow-lg"
-                type="submit">Search</button>
-              <button type="button" class="btn btn-custom text-white border-3 border-dark rounded-3 shadow-lg"
-                data-bs-toggle="modal" data-bs-target="#loginModal">
-                Login
-              </button>
             </form>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+            <form class="d-flex">
+              <button class="navbtn btn btn-custom text-white me-3 border-3 border-dark rounded-3 shadow-lg"
+                type="submit">Search</button>
+              <button class="navbtn btn btn-custom text-white border-3 border-dark rounded-3 shadow-lg" type="button"
+                data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </form><!-- form -->
+          </div> <!-- Navbar Content -->
+        </div><!-- container-fluid -->
+      </nav><!-- navbar -->
+    </div><!-- container -->
+  </header><!-- header -->
 
   <!-- ------------------------------------ Modal ------------------------------------ -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
