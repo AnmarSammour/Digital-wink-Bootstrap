@@ -78,6 +78,16 @@ body {
     color: #fe68ae !important;
 }
 
+@media (max-width: 768px) {
+    .navbar-nav .nav-item.dropdown .nav-link {
+        border: none !important;
+    }
+}
+
+.navbar-nav {
+    align-items: flex-start;
+}
+
 
 /* Main Styles  */
 main {
