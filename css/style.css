@@ -99,11 +99,11 @@ main {
 }
 
 /* Welcome Styles */
-.btn {
+.btn-get {
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn-get:hover {
     background-color: #044572 !important;
     color: #cbcbcb !important;
 }
