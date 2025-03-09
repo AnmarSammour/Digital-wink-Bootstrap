@@ -1,75 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
-
-/* Body Styles */
-body {
-    font-family: "Dancing Script", serif;
-    color: #000;
-}
-
-
-/* Header Styles */
-.header-wrapper {
-    background-color: rgba(230, 240, 255, 0.5) !important;
-}
-
-.container {
-    max-width: 100% !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-}
-
 
 .gradient-text {
     background: -webkit-linear-gradient(90deg, #457b9d, #FE68AE);
-    font-size: 18px;
-    font-weight: bolder;
-    text-transform: uppercase;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Dropdown Toggle Button */
-.dropdown-toggle {
-    border: 1px solid #1D3557 !important;
-    background-color: #efefef !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 0.25rem !important;
-}
-
-/* Custom Buttons */
-.btn-custom {
-    background-color: #1D3557 !important;
-    color: #FFFFFF !important;
-    border: none !important;
-}
-
-.btn-custom:hover {
-    background-color: #1d355797 !important;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.7) !important;
-    border: none !important;
-    padding: 0.5rem 0;
-    border-radius: 0.25rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
-}
-
-.dropdown-item {
-    color: #1D3557 !important;
-}
-
-.dropdown-item:hover {
-    background-color: rgba(225, 225, 225, 0.5) !important;
-}
-
-/* Hover Effects for Dropdown Toggle */
 .dropdown-toggle:hover {
     font-size: 17px;
 }
@@ -78,52 +17,41 @@ body {
     color: #fe68ae !important;
 }
 
-@media (max-width: 768px) {
-    .navbar-nav .nav-item.dropdown .nav-link {
-        border: none !important;
-    }
+.language-section .btn-custom::before,
+.language-section .btn-custom::after {
+    position: absolute;
+    content: "";
+    display: none;
 }
 
-.navbar-nav {
-    align-items: flex-start;
+.language-section .btn-custom::before {
+    top: 50%;
+    left: 100%;
+    border: 15px solid transparent;
+    transform: translateY(-50%);
 }
 
-
-/* Main Styles  */
-main {
-    width: 100%;
-    min-height: 85vh;
+.language-section .btn-custom::after {
+    width: 100px;
+    background-color: #1D3557;
+    top: 40px;
+    left: 70px;
+    border-radius: 0 10px 10px 10px;
 }
 
-.carousel-item {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.language-section .btn-custom:hover::before,
+.language-section .btn-custom:hover::after {
+    display: block;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
+.language-section .btn-custom:hover::after {
+    content: "Copy to Clipboard";
+    height: 60px;
 }
 
-/* Welcome Styles */
-.btn-get {
-    transition: 0.3s;
-}
-
-.btn-get:hover {
-    background-color: #044572 !important;
-    color: #cbcbcb !important;
-}
-
-/* Fixed image Styles */
-.fixed-img {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-attachment: fixed;
+.language-section .btn-custom:active::after {
+    content: "copied";
+    height: 30px;
 }
 
 .aboutbg {
@@ -134,69 +62,10 @@ main {
     background-image: url(../images/achievements.png);
 }
 
-/* featured-works Styles */
-.work-card {
-    position: relative;
-    min-height: 450px;
-    background-color: #fff !important;
-    border: none !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66) !important;
-    overflow: hidden;
-}
-
-.work-card img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0 !important;
-}
-
-.work-card .work-body {
-    padding: 1rem;
-}
-
-.work-card .work-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.work-card .work-title,
-.work-description {
-    color: #1D3557 !important;
-}
-
-.work-card .work-button {
-    background-color: #1D3557 !important;
-    border: none !important;
-    color: #fff !important;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-.work-card::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    background-color: #fe68ae;
-    opacity: 0.3;
-    transition: 1s;
-}
-
-.work-card:hover::after {
-    width: 100%;
-    height: 100%;
-}
-
+.work-card::after,
 .work-card::before {
     position: absolute;
     content: "";
-    bottom: 0;
-    right: 0;
     width: 0;
     height: 0;
     background-color: #fe68ae;
@@ -204,356 +73,63 @@ main {
     transition: 1s;
 }
 
+.work-card::after {
+    top: 0;
+    left: 0;
+}
+
+.work-card::before {
+    bottom: 0;
+    right: 0;
+}
+
+.work-card:hover::after,
 .work-card:hover::before {
     width: 100%;
     height: 100%;
 }
 
-/* Thank you cards Styles */
-.thank-you-card {
-    width: 100% !important;
-}
-
-.thank-you-card {
-    width: 100% !important;
-}
-
-.custom-container {
-    width: 85% !important;
-    margin: 2rem auto !important;
-}
-
-.card-bg {
-    border: none !important;
-    overflow: hidden !important;
-    border-radius: 20px !important;
-    min-height: 400px !important;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5) !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-}
-
-.card-bg:before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    background: inherit !important;
-    -webkit-filter: grayscale(1) !important;
-    -moz-filter: grayscale(100%) !important;
-    -ms-filter: grayscale(100%) !important;
-    -o-filter: grayscale(100%) !important;
-    filter: grayscale(100%) !important;
-}
-
 .card-bg:hover {
     transform: scale(0.9) !important;
     box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3) !important;
-    background-size: 130% !important;
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1) !important;
 }
 
 .card-bg:hover .card-img-overlay {
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-    background: #234f6d !important;
     background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, #044572 100%) !important;
 }
 
-.card .card-footer {
-    background: none !important;
-    border-top: none !important;
-}
-
-.card .card-footer .media img {
-    border: solid 3px rgba(255, 255, 255, 0.3) !important;
-}
-
-.card .card-body {
-    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-}
-
-.card-hover:hover {
-    cursor: pointer !important;
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-}
-
-.card-hover:hover .card-body {
-    margin-top: 30px !important;
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-}
-
 .card-hover .card-img-overlay {
-    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1) !important;
-    background: #234f6d !important;
-    background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #455f71 100%) !important;
-}
-
-@media (max-width: 768px) {
-    .card-bg {
-        min-height: 350px !important;
-    }
-}
-
-@media (max-width: 420px) {
-    .card-bg {
-        min-height: 300px !important;
-    }
-}
-
-/* Translation Styles */
-.bgdark {
-    background-color: #1D3557 !important;
-}
-
-.translate-link {
-    color: #1D3557 !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-}
-
-.btn-copy {
-    font-size: 18px !important;
-    border: 2px solid #1D3557 !important;
-    color: #000 !important;
-    transition: background-color 0.3s ease !important;
-}
-
-.btn-copy:hover {
-    background-color: #2c5082 !important;
-}
-
-.btncody {
-    position: relative;
-}
-
-.btncody::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    border: 15px solid transparent;
-    transform: translateY(-50%);
-    display: none;
-}
-
-.btncody::after {
-    position: absolute;
-    content: "";
-    width: 100px;
-    background-color: #1D3557;
-    top: 40px;
-    left: 70px;
-    border-radius: 0 10px 10px 10px;
-    display: none;
-}
-
-.btncody:hover::before {
-    display: block;
-}
-
-.btncody:hover::after {
-    content: "Copy to Clipboard";
-    display: block;
-    height: 60px;
-}
-
-.btncody:active::after {
-    content: "copied";
-    display: block;
-    height: 30px;
-}
-
-/* News Styles */
-.news-section {
-    max-width: 90% !important;
-    margin: auto;
-}
-
-.news-article {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    overflow: hidden;
-    position: relative;
-    background-color: #e1e5ea;
+    background: linear-gradient(0deg, rgba(35, 79, 109, 0.38) 0%, #455f71 100%) !important;
 }
 
 .news-article .article-image {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 
-.news-article .article-image img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    transition: transform 0.3s ease !important;
+.news-article.right-image .article-image {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
 
 .news-article:hover .article-image img {
     transform: scale(1.2);
 }
 
-.news-article .article-title {
-    font-size: 1.5rem;
-    color: #1D3557;
-    margin-bottom: 0.5rem;
-}
-
-.news-article .article-divider {
-    width: 50px;
-    height: 5px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #1D3557;
-    transition: width 0.2s ease;
-}
-
-.news-article.right-image .article-divider {
-    background-color: #fe68ae;
-}
-
 .news-article:hover .article-divider {
-    width: 100px;
+    width: 100px !important;
 }
 
-.news-article .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.875rem;
-    margin: 20px 0 0 0;
-    padding: 0;
-    justify-content: flex-start;
+.tag-r:hover {
+    background-color: #fe68ae89 !important;
 }
 
-.news-article .tags-container .tag,
-.tag-r {
-    display: inline-block;
-    background: rgba(83, 83, 83, 0.4);
-    border-radius: 3px;
-    padding: 2.5px 10px;
-    margin: 0 5px 5px 0;
-    cursor: default;
-    user-select: none;
-    transition: background-color 0.5s;
-}
-
-.news-article .tags-container .tag:hover {
-    background: rgba(83, 83, 83, 0.8);
-}
-
-.news-article .read-more {
-    text-decoration: none;
-    color: inherit;
-}
-
-.news-article.left-image .tags-container .tag-r:hover {
-    background-color: #1D3557;
-    color: white;
-}
-
-.news-article.right-image .tags-container .tag-r:hover {
-    background-color: #fe68ae;
-}
-
-.news-article.right-image {
-    flex-direction: row-reverse;
-}
-
-.news-article.left-image {
-    flex-direction: row;
-}
-
-.article-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media screen and (min-width: 768px) {
-    .news-article {
-        height: 400px;
-        flex-direction: row;
-    }
-
-    .news-article .article-image {
-        width: 27%;
-        height: 100%;
-        margin: 0;
-    }
-
-    .news-article.left-image .article-image {
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    }
-
-    .news-article.right-image .article-image {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-    }
-
-    .news-article .article-content {
-        width: 73%;
-        padding: 2rem;
-    }
-
-    .news-article .article-title {
-        font-size: 1.75rem;
-    }
-
-    .news-article .tags-container {
-        font-size: 1rem;
-        margin-top: 15%;
-
-    }
+.tag-l:hover {
+    background-color: #1d355772 !important;
 }
 
 @media (max-width: 768px) {
-    .news-article {
-        flex-direction: column;
+
+    .news-article.left-image .article-image,
+    .news-article.right-image .article-image {
+        clip-path: none;
     }
-
-    .news-article.right-image,
-    .news-article.left-image {
-        flex-direction: column;
-    }
-
-    .article-image {
-        order: -1;
-    }
-
-    .article-content {
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-
-}
-
-/* Footer Styles */
-.footer-logo {
-    box-shadow: -3px -3px 20px 5px rgba(255, 220, 237, 0.5);
-}
-
-.footer-link.text-secondary:hover {
-    color: white !important;
-}
-
-/* Social Icons Styles */
-.social-icon {
-    width: 65px;
-    height: 65px;
-    font-size: 60px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.social-icon:hover {
-    color: #000 !important;
 }
